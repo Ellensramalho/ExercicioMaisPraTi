@@ -1,0 +1,10 @@
+body{
+    background-color: #5CE1E6;
+}
+h1{
+    text-align: center;
+}
+ul,ol,nav{
+    list-style-position: inside;
+    text-align: center;
+}  
