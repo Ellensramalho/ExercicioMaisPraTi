@@ -1,0 +1,27 @@
+body{
+    background-image: url(./Imagens/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    background-color: #c0b7eb;
+    text-align: center;
+    border: solid 1px #000000;
+}
+
+h2{
+    font-size: 20px;
+    background-color: #c0b7eb;
+    border: solid 1px #000000;
+    box-shadow: 0 0 10px royalblue;
+    margin-top: 2%;
+    text-decoration: underline;
+}
+
+.destaque{
+   background-color: #c0b7eb;
+   border: solid 1px #000000; 
+   font-style: italic;
+   font-size: 15px;
+   text-align: center;
+}
