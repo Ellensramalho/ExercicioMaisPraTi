@@ -1,0 +1,121 @@
+:root {
+  --header-bg: #e49cee;
+  --text: #222;
+  --accent: #0070f3;
+  --border: #e5e5e5;
+  --transition: 0.25s ease;
+  --hamburger-size: 24px;
+  --nav-gap: 1rem;
+  --container-max: 1000px;
+  --z-overlay: 999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #f7f7f7;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-overlay);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--nav-gap);
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.nav a:hover,
+.nav a:focus {
+  border-color: var(--accent);
+}
+
+.menu-toggle {
+  display: none; 
+}
+
+.hamburger {
+  width: var(--hamburger-size);
+  height: var(--hamburger-size);
+  display: none;            
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    display: none; 
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  .menu-toggle:checked ~ .nav {
+    display: block;
+  }
+
+}
+
