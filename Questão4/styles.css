@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(235, 198, 198);
+}
+header{
+    background-color: rgb(187, 76, 76);
+    border-radius: 20px;
+    color: rgb(255, 253, 254);
+    border: solid 2px rgb(0, 0, 0);
+
+}
+h1{
+    text-align: center;
+}
+header h2{
+    margin-left: 2%;
+}
+main{
+    margin-top: 10px;
+    border: solid 2px brown;
+}
+
+h2,p{
+    margin-left: 2%;
+}
+
+footer{
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgb(185, 196, 34);
+    border: solid 2px rgb(0, 0, 0);
+    margin-top: 10px;
+}
+h3{
+    text-align: center;
+}
